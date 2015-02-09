@@ -146,13 +146,50 @@ $paramspartidasuuid = $fieldcdspartidasuuid->addChild('PARAMS');
 $paramspartidas = $fieldpartidas->addChild('PARAMS');
 $paramsgeneral = $metadata->addChild('PARAMS');
 
-$rowdata = $xmlcoi->addChild('ROWDATA');
-$rowtitulo = $rowdata->addChild('ROW');
-$rowtitulo->addAttribute('VersionCOI','701');
-$rowtitulo->addAttribute('TipoPoliz','Dr');
-$rowtitulo->addAttribute('DiaPoliz','29');
-$rowtitulo->addAttribute('ConcepPoliz','Ventas del Dia');
-$partidascuentas = $rowtitulo->addChild('Partidas');
+/* ingresamos datos de prueba*/
+		$rowdata = $xmlcoi->addChild('ROWDATA');
+		$rowtitulo= $rowdata->addChild('ROW');
+		$rowtitulo->addAttribute('VersionCOI','701');
+		$rowtitulo->addAttribute('TipoPoliz','Dr');
+		$rowtitulo->addAttribute('DiaPoliz','29');
+		$rowtitulo->addAttribute('ConcepPoliz','Ventas del Dia');
+/*$partidascuentas = $rowtitulo->addChild('Partidas');*/
+
+/* Creamos partida de prueba
+$rowpartidas[0] = $partidascuentas->addChild('ROWPartidas');
+$rowpartidas[0]->addAttribute('Cuenta','1103-0020-0009-0001-2');
+$rowpartidas[0]->addAttribute('Depto','0');
+$rowpartidas[0]->addAttribute('ConceptoPol','E4807 170.52 14.5872');
+$rowpartidas[0]->addAttribute('Monto','2487.41');
+$rowpartidas[0]->addAttribute('TipoCambio','14.5872');
+$rowpartidas[0]->addAttribute('DebeHaber','D');
+$rowpartidas[0]->addAttribute('ccostos','0');
+$rowpartidas[0]->addAttribute('proyectos','0');
+$rowpartidas[0]->addAttribute('FRMPAGO','');
+$rowpartidas[0]->addAttribute('NUMCHEQUE','');
+$rowpartidas[0]->addAttribute('MONTOBN','0');
+$rowpartidas[0]->addAttribute('BANCO','0');
+$rowpartidas[0]->addAttribute('CTAORIG','');
+$rowpartidas[0]->addAttribute('BENEF','');
+$rowpartidas[0]->addAttribute('RFC','');
+$rowpartidas[0]->addAttribute('BANCODEST','0');
+$rowpartidas[0]->addAttribute('CTADEST','');
+$rowpartidas[0]->addAttribute('FECHACHEQUE','');
+$rowpartidas[0]->addAttribute('IDUUID','0');
+
+/*creamos uuid de prueba
+
+$cdspartidas = $rowpartidas[0]->addChild('CDSPartidasUUID');
+$rowpartidasuuid[1] = $cdspartidas->addChild('ROWCDSPartidasUUID');
+$rowpartidasuuid[1]->addAttribute('NUMREG','1');
+$rowpartidasuuid[1]->addAttribute('UUIDTIMBRE','B185A06E-C094-45B8-B6C1-416F09A8D04B');
+$rowpartidasuuid[1]->addAttribute('MONTO', '170.520045');
+$rowpartidasuuid[1]->addAttribute('SERIE','E');
+$rowpartidasuuid[1]->addAttribute('FOLIO','4807');
+$rowpartidasuuid[1]->addAttribute('RFCEMISOR','AIR9007129M1');
+$rowpartidasuuid[1]->addAttribute('RFCRECEPTOR','TME931214KU6');
+$rowpartidasuuid[1]->addAttribute('FECHAUUID','29/01/2014');*/
+
 
 
 
